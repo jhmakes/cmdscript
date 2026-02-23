@@ -135,6 +135,7 @@ var ParseList = function(src){
     var type = src.shift();
     while(src.length > 0 && src[0] != LexerOpposite(type))
         body.push(ParseExpr(src));
+    ParseSpace(src);
     ParserExpect(src,LexerOpposite(type),"RT ERR: expct '"+LexerOpposite(type)+"'.");
     return {
         type: "list",
