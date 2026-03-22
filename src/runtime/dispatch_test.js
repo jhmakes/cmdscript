@@ -8,7 +8,7 @@ var mdefs = [[1,1,[unit],(a => 0)],
 
 var toTable = function(defs){
     var tabl = [];
-    defs = defs.map(i => i).sort((a,b) => a[1] - b[1]);
+    defs = defs.map(i => i).sort((a,b) => b[1] - a[1]);
     for(var df of defs){
         if(tabl[df[0]] == undefined)
             tabl[df[0]] = [];
